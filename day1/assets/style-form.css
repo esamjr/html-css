@@ -1,0 +1,28 @@
+input {
+    background-color: grey;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+  }
+  
+  .margin-bottom-10 {
+    margin-bottom: 10px;
+    /* margin */
+    /* 1 value (margin: 16px;) => atas kanan bawah kiri => 16px */
+    /* 2 value (margin: 10px 6px;) => atas-bawah 10px dan kiri-kanan 6px */
+    /* 3 value => 10px atas, 8px kiri-kanan/horizontal, 6px bawah */
+    /* 4 value => 16 10 12 8 => 16 top, 10 right, 12 bottom, 8 left */
+  
+    /* margin-top */
+    /* margin-right */
+    /* margin-bottom */
+    /* margin-left */
+  }
+  
+  .box-form {
+    border: 2px solid #c17474;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 8px;
+    margin: 0 auto;
+  }

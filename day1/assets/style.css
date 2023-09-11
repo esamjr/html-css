@@ -1,43 +1,59 @@
 #sect-1 {
     font-size: 20px;
 }
-p {
-    font-size: 10px;
-    text-align: justify;
-}
 
-
-
-/* HTML FORM CSS */
-textarea,
-input {
-    background-color: grey;
-    border: none;
-    outline: none;
-    margin-bottom: 10px;
-}
-
-.box-form {
-    border: 2px solid black;
-    padding: 8px;
-    width: fit-content;
-    border-radius: 8px;
-}
-.flex {
-    display: flex;
-    /* flex-direction: ; */
-}
 .box {
     width: 400px;
     height: 400px;
     border: 1px solid black;
 }
+
 .satu {
     background-color: lightblue;
+    position: static;
+    /* tidak bisa digeser */
+    top: 100px;
 }
+
 .dua {
     background-color: lightcoral;
+    position: relative;
+    top: 0;
 }
+
 .tiga {
     background-color: lightgreen;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+}
+
+.empat {
+    background-color: lightsalmon;
+    /* position: fixed; */
+    right: 0;
+    bottom: 0;
+}
+
+.lima {
+    background-color: lightseagreen;
+    /* position: sticky; */
+    top: 70px;
+    left: 400px;
+}
+
+.enam {
+    background-color: lightskyblue;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-2 {
+    display: flex;
+    /* row */
+    justify-content: space-between;
+    align-items: center;
 }
