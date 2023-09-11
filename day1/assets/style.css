@@ -1,0 +1,43 @@
+#sect-1 {
+    font-size: 20px;
+}
+p {
+    font-size: 10px;
+    text-align: justify;
+}
+
+
+
+/* HTML FORM CSS */
+textarea,
+input {
+    background-color: grey;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.box-form {
+    border: 2px solid black;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 8px;
+}
+.flex {
+    display: flex;
+    /* flex-direction: ; */
+}
+.box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+.satu {
+    background-color: lightblue;
+}
+.dua {
+    background-color: lightcoral;
+}
+.tiga {
+    background-color: lightgreen;
+}
