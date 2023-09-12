@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detail Page - Books</title>
+    <link rel="stylesheet" href="../assets/css/globals.css" />
+    <link rel="stylesheet" href="../assets/css/detail-page.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <div class="detail">
+        <div class="main-wrap">
+            <div class="overlap">
+                <div class="overlap-group">
+                    <img class="covernya" src="../assets/img/covernya.png" />
+                    <img class="img" src="../assets/img/covernya-1@2x.png" />
+                    <div class="back-button"><img class="arrow" src="../assets/img/arrow.svg" /></div>
+                    <div class="text-wrapper pointer" id="edit-books">Edit</div>
+                    <div class="text-wrapper-2" id="hapus-books">Delete</div>
+                </div>
+                <div class="overlap-2">
+                    <div class="text-wrapper-3">DILAN 1990</div>
+                    <div class="genre">
+                        <div class="overlap-3">
+                            <div class="rectangle"></div>
+                            <div class="text-wrapper-4">Novel</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-wrapper-5">Available</div>
+            </div>
+            <p class="p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac diam eget est rutrum ultrices. Donec
+                laoreet
+                enim a massa dapibus, cursus egestas dui pulvinar. Proin sit amet accumsan lectus. Nullam auctor auctor
+                consequat. Donec semper magna erat, sed fringilla lacus pretium eget. Cras porttitor, nibh sit amet
+                interdum
+                bibendum, nibh velit accumsan tellus, vel vehicula tellus leo vitae ipsum. Praesent sit amet libero sed
+                orci
+                ullamcorper efficitur. Pellentesque in euismod purus, sit amet ultrices tortor. Vestibulum ante dui,
+                tempor at
+                dui id, tincidunt euismod diam. Integer pellentesque massa nibh, ac eleifend odio malesuada sed.
+                Phasellus
+                orci sem, cursus nec orci ut, accumsan facilisis lacus. Nullam at elementum nibh, ac gravida felis. In
+                sagittis rhoncus nisi tempus dignissim. Sed fringilla consequat ante vitae lobortis. Cras posuere ligula
+                vel
+                enim suscipit malesuada. Vivamus non nulla ut ante imperdiet euismod quis nec massa.
+            </p>
+            <div class="text-wrapper-6">30 Juni 2019</div>
+            <button class="borrow-button">
+                <div class="borrow-wrapper">
+                    <div class="text-wrapper-7">Borrow</div>
+                </div>
+            </button>
+        </div>
+    </div>
+</body>
+<!-- Modal -->]
+<div id="edit-book-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="close-modal">&times;</span>
+        <h1>Edit Data</h1>
+        <form id="book-form" class="grid-form">
+            <div class="form-group">
+                <label for="image-url">Image URL </label>
+                <input type="text" id="image-url" name="image-url" placeholder="http://gambar.com/dilan.jpg" required>
+            </div>
+            <div class="form-group">
+                <label for="book-title">Title </label>
+                <input type="text" id="book-title" name="book-title" placeholder="Dilan 1990" required>
+            </div>
+            <div class="form-group">
+                <label for="book-description">Description </label>
+                <textarea id="book-description" name="book-description" style="height: 250px;"
+                    placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, culpa aspernatur possimus consequatur vitae corporis."
+                    required></textarea>
+            </div>
+            <button type="button" id="save-button">Save</button>
+        </form>
+    </div>
+</div>
+<div id="hapus-book-modal" class="modal" >
+    <div class="modal-content" style="width: 600px;height: 300px;">
+        <span class="close-button" id="close-modal-hapus">&times;</span>
+        <div class="image-hapus">
+            <img src="../assets/img/checked.png" alt="Hapus Books" class="hapus-img">
+        </div>
+        <div class="text-under-image">
+            Data Dilan 1990 berhasil dihapus!
+        </div>
+    </div>
+</div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#edit-books").click(function () {
+            $("#edit-book-modal").css("display", "block");
+        });
+        $("#hapus-books").click(function () {
+            $("#hapus-book-modal").css("display", "block");
+        });
+        $("#close-modal, .modal").click(function () {
+            $("#edit-book-modal").css("display", "none");
+        });
+        $("#close-modal-hapus, .modal").click(function () {
+        $("#hapus-book-modal").css("display", "none");
+        window.location.href = "../index.html";
+        });
+
+        $(".modal-content").click(function (e) {
+            e.stopPropagation();
+        });
+    });
+</script>
+
+</html>
