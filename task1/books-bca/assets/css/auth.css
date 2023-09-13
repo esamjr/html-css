@@ -62,18 +62,18 @@
     line-height: normal;
 }
 
-.login .overlap-group {
+.login .overlap-group {  
     position: absolute;
     width: 449px;
     height: 412px;
-    top: 206px;
+    top: 330px;
     left: 1390px;
 }
 
 .login .text-wrapper-2 {
     position: absolute;
     width: 354px;
-    top: 0;
+    top: -115px;
     left: 0;
     font-family: "Airbnb Cereal App-Bold", Helvetica;
     font-weight: 700;
@@ -83,10 +83,10 @@
     line-height: normal;
 }
 
-.login .welcome-back-please {
+.login .welcome-back-please {  
     position: absolute;
     width: 388px;
-    top: 89px;
+    top: -33px;
     left: 0;
     font-family: "Airbnb Cereal App-Medium", Helvetica;
     font-weight: 500;
@@ -103,7 +103,20 @@
     top: 190px;
     left: 0;
 }
-
+.login .field-username {
+    position: absolute;
+    width: 421px;
+    height: 160px;
+    top: 30px;
+    left: 0;
+}
+.login .field-fullname {
+    position: absolute;
+    width: 421px;
+    height: 160px;
+    top: 110px;
+    left: 0;
+}
 .login .overlap-group-2 {
     position: relative;
     width: 417px;
@@ -156,6 +169,8 @@
     font-size: 20px;
     letter-spacing: 0;
     line-height: normal;
+    border: 0px;
+    border-radius: 10px;
 }
 
 .login .password {
@@ -208,8 +223,14 @@
     font-size: 17px;
     letter-spacing: 0;
     line-height: normal;
+    transition: color 0.3s ease;
 }
-
+.text-wrapper-6:hover {
+    color: #FF0000;
+}
+.pointer {
+    cursor: pointer;
+}
 .login .bookshelf {
     position: absolute;
     width: 100px;
