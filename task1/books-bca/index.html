@@ -1,291 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
-    />
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
-    <title>Books - BCA Fazztrack</title>
-  </head>
 
-  <body>
-    <div class="home">
-      <div class="wrapper">
-        <div class="overlap">
-          <nav class="navbar-custom">
-            <div class="navbar-container">
-              <div class="sorting">
-                <div class="sort-by-categories">
-                  <div class="overlap-group-2">
-                    <div class="text-wrapper-6">All Categories</div>
-                    <img
-                      class="polygon"
-                      src="./assets/img/Polygon.svg"
-                      alt="Polygon"
-                    />
-                  </div>
-                </div>
-                <div class="sort-by-date">
-                  <div class="overlap-group-2">
-                    <div class="text-wrapper-6">All Time</div>
-                    <img
-                      class="polygon-2"
-                      src="./assets/img/Polygon.svg"
-                      alt="Polygon"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="search" style="padding-bottom: 10px">
-                <div class="overlap-6">
-                  <img
-                    class="magnifying-glass"
-                    src="./assets/img/magnifying-glass.png"
-                    alt="Magnifying Glass"
-                  />
-                  <div class="text-wrapper-7">Search book</div>
-                </div>
-              </div>
-              <div class="logo">
-                <img
-                  class="bookshelf"
-                  src="./assets/img/bookshelf.png"
-                  alt="Bookshelf"
-                />
-                <div class="text-wrapper-8">Library</div>
-              </div>
-            </div>
-          </nav>
-          <div class="image-container">
-            <img
-              class="new-book"
-              src="./assets/img/covernya.png"
-              alt="New Book 1"
-            />
-            <div
-              class="text-overlay"
-              style="width: 100%; border-radius: 10px; height: 40%"
-            >
-              <h4>Dilan 1990</h4>
-              <span>Pidi Baiq</span>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+  <title>Books - BCA Fazztrack</title>
+</head>
 
-          <div class="image-container" style="top: 150px">
-            <img
-              class="new-book"
-              src="./assets/img/d96eff85-ae75-4f56-bdfc-dd7a055e7400.png"
-              alt="New Book 2"
-            />
-            <div
-              class="text-overlay"
-              style="height: 50%; width: -moz-available; border-radius: 10px"
-            >
-              <h4>Ubur Ubur Lembur</h4>
-              <span>Raditya Dika</span>
+<body>
+  <div class="home">
+    <div class="container">
+      <div class="overlap">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom shadow">
+          <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    All Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Categories 1</a></li>
+                    <li><a class="dropdown-item" href="#">Categories 2</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    All Time
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <li><a class="dropdown-item" href="#">Time 1</a></li>
+                    <li><a class="dropdown-item" href="#">Time 2</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0 mx-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search book" aria-label="Search">
+              </form>
             </div>
+            <a class="navbar-brand" href="#">
+              <img src="./assets/img/bookshelf.png" alt="Bookshelf" class="bookshelf">
+              Library
+            </a>
           </div>
-          <div class="image-container">
-            <img
-              class="new-book"
-              src="./assets/img/laskar.jpeg"
-              alt="New Book 3"
-              style="height: 250px; width: 527px; border-radius: 15px"
-            />
-            <div
-              class="text-overlay"
-              style="width: -moz-available; height: 40%"
-            >
-              <h4>Laskar Pelangi</h4>
-              <span> Andrea Hirata </span>
-            </div>
-          </div>
-          <!-- <div class="carousel my-3">
-                    <img src="./assets/img/covernya.png" alt="New Book 1" class="carousel-cell">
-                    <img src="./assets/img/d96eff85-ae75-4f56-bdfc-dd7a055e7400.png" alt="New Book 2" class="carousel-cell">
-                    <img src="./assets/img/laskar.jpeg" alt="New Book 3" class="carousel-cell">
-                </div> -->
-          <div class="card-custom">
-            <div class="catalog-group-wrapper">
-              <a href="./pages/detail-page.html" class="catalog-group-link">
-                <div class="catalog-group">
-                  <img
-                    class="img"
-                    src="./assets/img/covernya.png"
-                    alt="Cover Image"
-                  />
-                  <div class="dilan">
-                    <div class="text-wrapper">Dilan 1990</div>
-                    <p class="p">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed convallis lacus mi, sit amet vehicula nisl consequat
-                      id.
-                    </p>
-                  </div>
+        </nav>
+        <!-- <nav class="navbar-custom">
+          <div class="navbar-container">
+            <div class="sorting">
+              <div class="sort-by-categories">
+                <div class="overlap-group-2">
+                  <div class="text-wrapper-6">All Categories</div>
+                  <img class="polygon" src="./assets/img/Polygon.svg" alt="Polygon" />
                 </div>
-              </a>
-            </div>
-            <div class="div-wrapper">
-              <div class="catalog-2">
-                <div class="rectangle"></div>
-                <div class="text-wrapper-2">Sebuah Seni Untuk ...</div>
-                <img
-                  class="element"
-                  src="./assets/img/977994_346fec47-0d83-4c64-ac50-b3e121e797d0_700_700.png"
-                  alt="Element"
-                />
-                <p class="text-wrapper-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  convallis lacus mi, sit amet vehicula nisl consequat id.
-                </p>
+              </div>
+              <div class="sort-by-date">
+                <div class="overlap-group-2">
+                  <div class="text-wrapper-6">All Time</div>
+                  <img class="polygon-2" src="./assets/img/Polygon.svg" alt="Polygon" />
+                </div>
               </div>
             </div>
-            <div class="card-2">
-              <div class="catalog-3">
-                <div class="rectangle"></div>
-                <p class="text-wrapper-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  convallis lacus mi, sit amet vehicula nisl consequat id.
-                </p>
-                <div class="text-wrapper-5">React Native</div>
-                <img
-                  class="img"
-                  src="./assets/img/3992f708-3a68-412d-b583-e19d6a02df80.png"
-                  alt="Image"
-                />
+            <div class="search" style="padding-bottom: 10px">
+              <div class="overlap-6">
+                <img class="magnifying-glass" src="./assets/img/magnifying-glass.png" alt="Magnifying Glass" />
+                <div class="text-wrapper-7">Search book</div>
+                <input type="text" placeholder="Search book" class="text-wrapper-7 border-0">
               </div>
+            </div>
+            <div class="logo">
+              <img class="bookshelf" src="./assets/img/bookshelf.png" alt="Bookshelf" />
+              <div class="text-wrapper-8">Library</div>
             </div>
           </div>
-          <div class="side-bar">
-            <div class="overlap-7">
-              <img
-                class="element-2"
-                src="./assets/img/niki.jpeg"
-                alt="Element 2"
-              />
-              <img class="menu" src="./assets/img/menu.png" alt="Menu" />
-              <div class="text-wrapper-9">
-                Niki Zefanya
-                <div class="logoutbtn">
-                  <a href="/pages/login.html">
-                    <div class="rect5"></div>
-                    <div class="logout">Logout</div>
-                    <img
-                      class="logout-img"
-                      style="
+        </nav> -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    All Categories
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Categories 1</a></li>
+                    <li><a class="dropdown-item" href="#">Categories 2</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    All Time
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Time 1</a></li>
+                    <li><a class="dropdown-item" href="#">Time 2</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex ml-auto">
+                <input class="form-control me-2" type="search" placeholder="Search book" aria-label="Search">
+                
+              </form>
+              
+            </div>
+            <a class="navbar-brand" href="#">
+              <img src="./assets/img/bookshelf.png" alt="Bookshelf" class="bookshelf">
+              Library
+            </a>
+          </div>
+        </nav> -->
+        <!-- <div class="image-container">
+          <img class="new-book" src="./assets/img/covernya.png" alt="New Book 1" />
+          <div class="text-overlay" style="width: 100%; border-radius: 10px; height: 40%">
+            <h4>Dilan 1990</h4>
+            <span>Pidi Baiq</span>
+          </div>
+        </div>
+
+        <div class="image-container" style="top: 150px">
+          <img class="new-book" src="./assets/img/d96eff85-ae75-4f56-bdfc-dd7a055e7400.png" alt="New Book 2" />
+          <div class="text-overlay" style="height: 50%; width: -moz-available; border-radius: 10px">
+            <h4>Ubur Ubur Lembur</h4>
+            <span>Raditya Dika</span>
+          </div>
+        </div>
+        <div class="image-container">
+          <img class="new-book" src="./assets/img/laskar.jpeg" alt="New Book 3"
+            style="height: 250px; width: 527px; border-radius: 15px" />
+          <div class="text-overlay" style="width: -moz-available; height: 40%">
+            <h4>Laskar Pelangi</h4>
+            <span> Andrea Hirata </span>
+          </div>
+        </div> -->
+        <div class="carousel" style="margin-top: 20px; width: 87%; left: 100px; position: relative;">
+          <div class="carousel-cell">
+            <img src="./assets/img/covernya.png" alt="New Book 1" class="cover-book" loading="lazy">
+            <div class="caption primary-font">Dilan 1990</div>
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/img/d96eff85-ae75-4f56-bdfc-dd7a055e7400.png" alt="New Book 2" class="cover-book" loading="lazy">
+            <div class="caption primary-font">Ubur Ubur Lembur</div>
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/img/laskar.jpeg" alt="New Book 3" class="cover-book" loading="lazy">
+            <div class="caption primary-font">Laskar Pelangi</div>
+          </div>
+        </div>
+      
+        
+        <div class="card-custom">
+          <div class="catalog-group-wrapper">
+            <a href="./pages/detail-page2.html" class="catalog-group-link">
+              <div class="catalog-group">
+                <img class="img" src="./assets/img/covernya.png" alt="Cover Image" />
+                <div class="dilan">
+                  <div class="text-wrapper">Dilan 1990</div>
+                  <p class="p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed convallis lacus mi, sit amet vehicula nisl consequat
+                    id.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="div-wrapper">
+            <div class="catalog-2">
+              <div class="rectangle"></div>
+              <div class="text-wrapper-2">Sebuah Seni Untuk ...</div>
+              <img class="element" src="./assets/img/977994_346fec47-0d83-4c64-ac50-b3e121e797d0_700_700.png"
+                alt="Element" />
+              <p class="text-wrapper-3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                convallis lacus mi, sit amet vehicula nisl consequat id.
+              </p>
+            </div>
+          </div>
+          <div class="card-2">
+            <div class="catalog-3">
+              <div class="rectangle"></div>
+              <p class="text-wrapper-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                convallis lacus mi, sit amet vehicula nisl consequat id.
+              </p>
+              <div class="text-wrapper-5">React Native</div>
+              <img class="img" src="./assets/img/3992f708-3a68-412d-b583-e19d6a02df80.png" alt="Image" />
+            </div>
+          </div>
+        </div>
+        <div class="side-bar">
+          <div class="overlap-7">
+            <img class="element-2" src="./assets/img/niki.jpeg" alt="Element 2" />
+            <img class="menu" src="./assets/img/menu.png" alt="Menu" />
+            <div class="text-wrapper-9">
+              Niki Zefanya
+              <div class="logoutbtn">
+                <a href="/pages/login.html">
+                  <div class="rect5"></div>
+                  <div class="logout">Logout</div>
+                  <img class="logout-img" style="
                         width: 21.99px;
                         height: 21.99px;
                         left: 15.02px;
                         top: 8px;
                         position: absolute;
-                      "
-                      src="./assets/img/logout.png"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="text-wrapper-10 pointer">Explore</div>
-              <div class="text-wrapper-11 pointer">History</div>
-              <div class="text-wrapper-12 pointer" id="add-book-trigger">
-                Add Book
+                      " src="./assets/img/logout.png" />
+                </a>
               </div>
             </div>
-          </div>
-          <div class="next-button">
-            <div class="overlap-8">
-              <div class="text-wrapper-13">&lt;</div>
+            <div class="text-wrapper-10 pointer">Explore</div>
+            <div class="text-wrapper-11 pointer">History</div>
+            <div class="text-wrapper-12 pointer" id="add-book-trigger">
+              Add Book
             </div>
           </div>
-
-          <div class="next-button-wrapper">
-            <div class="next-button-2">
-              <div class="overlap-8">
-                <div class="text-wrapper-14">&gt;</div>
-              </div>
-            </div>
-          </div>
-          <div class="text-wrapper-15">List Book</div>
         </div>
+        <!-- <div class="next-button">
+          <div class="overlap-8">
+            <div class="text-wrapper-13">&lt;</div>
+          </div>
+        </div>
+
+        <div class="next-button-wrapper">
+          <div class="next-button-2">
+            <div class="overlap-8">
+              <div class="text-wrapper-14">&gt;</div>
+            </div>
+          </div>
+        </div> -->
+        <div class="text-wrapper-15">List Book</div>
       </div>
     </div>
-    <!-- Modal -->]
-    <div id="add-book-modal" class="modal">
-      <div class="modal-content" style="width: 35%;">
-        <span class="close-button" id="close-modal">&times;</span>
-        <h1>Add Data</h1>
-        <form id="book-form" class="grid-form">
-          <div class="form-group">
-            <label for="image-url">Image URL </label>
-            <input
-              type="text"
-              id="image-url"
-              name="image-url"
-              placeholder="Url Image..."
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="book-title">Title </label>
-            <input
-              type="text"
-              id="book-title"
-              name="book-title"
-              placeholder="Title..."
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="book-description">Description </label>
-            <textarea
-              id="book-description"
-              name="book-description"
-              style="height: 250px"
-              placeholder="Description..."
-              required
-            ></textarea>
-          </div>
-          <button type="button" id="save-button">Save</button>
-        </form>
-      </div>
+  </div>
+  <!-- Modal -->
+  <div id="add-book-modal" class="modal">
+    <div class="modal-content" style="width: 35%;">
+      <span class="close-button" id="close-modal">&times;</span>
+      <h1>Add Data</h1>
+      <form id="book-form" class="grid-form">
+        <div class="form-group">
+          <label for="image-url">Image URL </label>
+          <input type="text" id="image-url" name="image-url" placeholder="Url Image..." required />
+        </div>
+        <div class="form-group">
+          <label for="book-title">Title </label>
+          <input type="text" id="book-title" name="book-title" placeholder="Title..." required />
+        </div>
+        <div class="form-group">
+          <label for="book-description">Description </label>
+          <textarea id="book-description" name="book-description" style="height: 250px" placeholder="Description..."
+            required></textarea>
+        </div>
+        <button type="button" id="save-button">Save</button>
+      </form>
     </div>
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $("#add-book-trigger").click(function () {
-        $("#add-book-modal").css("display", "block");
-      });
-
-      $("#close-modal, .modal").click(function () {
-        $("#add-book-modal").css("display", "none");
-      });
-
-      $(".modal-content").click(function (e) {
-        e.stopPropagation();
-      });
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#add-book-trigger").click(function () {
+      $("#add-book-modal").css("display", "block");
     });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var flkty = new Flickity(".carousel", {
-        wrapAround: true,
-      });
+
+    $("#close-modal, .modal").click(function () {
+      $("#add-book-modal").css("display", "none");
     });
-  </script>
+
+    $(".modal-content").click(function (e) {
+      e.stopPropagation();
+    });
+    $('.carousel').on('flickity.ready', function () {
+    $('.flickity-prev-next-button.previous').css('left', '100px');
+    });
+
+    // Override CSS for .flickity-prev-next-button.next
+    $('.carousel').on('flickity.ready', function () {
+    $('.flickity-prev-next-button.next').css('right', '100px');
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var flkty = new Flickity(".carousel", {
+      wrapAround: true,
+    });
+  });
+</script>
+
 </html>

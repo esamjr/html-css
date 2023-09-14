@@ -750,9 +750,28 @@ span {
     margin-right: 10px;
     background-color: #8c8;
     border-radius: 5px;
+    object-fit: fill;
 }
 
 .cover-book {
-    object-fit: cover;
+    width: 100%;
+    object-fit: fill;
     object-position: center 10%;
+}
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (4th parameter) for transparency */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    /* height: 120px; */
+}
+
+.primary-font {
+    font-family: "Airbnb Cereal App-Bold", Helvetica;
 }
