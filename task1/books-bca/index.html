@@ -62,7 +62,7 @@
     <div class="container-fluid">
       <div class="carousel" style="margin-top: 20px">
         <div class="carousel-cell">
-          <img src="./assets/img/covernya.png" alt="New Book 1" class="cover-book" loading="lazy">
+          <img src="./assets/img/dilan.png" alt="New Book 1" class="cover-book" loading="lazy">
           <div class="caption primary-font">Dilan 1990</div>
         </div>
         <div class="carousel-cell">
@@ -78,47 +78,9 @@
 
 
       <!-- <div class="text-wrapper-15">List Book</div> -->
-      <div class="container" style="margin-top: 10%;">
+      <div class="container" style="margin-top: 2%;">
         <h2>List Book</h2>
-        <div class="row justify-content-center align-items-center">
-          <div class="col-lg-3 mx-lg-1 col-sm-8 mt-sm-3">
-            <a href="./pages/detail-page2.html" class="catalog-group-link">
-              <div class="catalog-group">
-                <img class="img" src="./assets/img/covernya.png" alt="Cover Image" />
-                <div class="dilan">
-                  <div class="text-wrapper">Dilan 1990</div>
-                  <p class="p">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed convallis lacus mi, sit amet vehicula nisl consequat
-                    id.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-3 mx-lg-1 col-sm-8 mt-sm-3">
-            <div class="catalog-2">
-              <div class="rectangle"></div>
-              <div class="text-wrapper-2">Sebuah Seni Untuk ...</div>
-              <img class="element" src="./assets/img/977994_346fec47-0d83-4c64-ac50-b3e121e797d0_700_700.png"
-                alt="Element" />
-              <p class="text-wrapper-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                convallis lacus mi, sit amet vehicula nisl consequat id.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-3 mx-lg-1 col-sm-8 mt-sm-3">
-            <div class="catalog-3">
-              <div class="rectangle"></div>
-              <p class="text-wrapper-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                convallis lacus mi, sit amet vehicula nisl consequat id.
-              </p>
-              <div class="text-wrapper-5">React Native</div>
-              <img class="img" src="./assets/img/3992f708-3a68-412d-b583-e19d6a02df80.png" alt="Image" />
-            </div>
-          </div>
+        <div class="row justify-content-center align-items-center" id="book-list">
         </div>
       </div>
 
@@ -182,31 +144,11 @@
   integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="./assets/js/main.js"></script>
 <script>
-  $(document).ready(function () {
-    $("#add-book-trigger").click(function () {
-      $("#add-book-modal").css("display", "block");
-    });
-    $("#close-modal, .modal").click(function () {
-      $("#add-book-modal").css("display", "none");
-    });
-
-    $(".modal-content").click(function (e) {
-      e.stopPropagation();
-    });
-    $("#menu-toggle").click(function () {
-      $(".sidebar").toggleClass("close");
-      $(this).toggleClass("close");
-      $(".overlap").removeClass("overlap");
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  var flkty = new Flickity(".carousel", {
+    wrapAround: true,
   });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var flkty = new Flickity(".carousel", {
-      wrapAround: true,
-    });
-  });
-</script>
-
+});</script>
 </html>

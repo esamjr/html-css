@@ -15,7 +15,8 @@
         <div class="container main-wrap">
             <div class="row">
                 <div class="col-md-3">
-                    <img class="covernya" src="../assets/img/covernya.png" />
+                    <!-- <img class="covernya" src="../assets/img/covernya.png" /> -->
+                    <img class="covernya" src="" alt="Book Cover" id="book-cover" />
                 </div>
                 <div class="col-md-6 d-none d-sm-block">
                     <img class="img-preview end-0" src="../assets/img/covernya-1@2x.png" />
@@ -25,15 +26,17 @@
                         <img class="arrow" src="../assets/img/arrow.svg" />
                     </div>
                     <div class="text-wrapper d-flex pointer">
-                        <div style="margin-right:15px" id="edit-books">Edit</div>
-                        <div id="hapus-books">Delete</div>
+                        <div class="text-black" style="margin-right:15px" id="edit-books">Edit</div>
+                        <div class="text-dark" id="hapus-books">Delete</div>
                     </div>                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-7">
                     <div class="overlap-2">
-                        <div class="text-wrapper-3">DILAN 1990</div>
+                        <!-- <div class="text-wrapper-3">DILAN 1990</div> -->
+
+                        <div class="text-wrapper-3" id="book-title"></div>
                         <div class="genre">
                             <div class="overlap-3">
                                 <div class="rectangle"></div>
@@ -42,10 +45,12 @@
                         </div>
                     </div>
                     <div class="text-wrapper-5 end-0">Available</div>
-                    <p class="p">
+                    <!-- <p class="p">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum, aut maxime rerum delectus quo voluptatibus commodi? Officiis explicabo architecto reiciendis eos nisi ipsam beatae sint perferendis aliquid a doloribus corrupti nesciunt atque nobis, labore dolor saepe quos aperiam velit enim! Veritatis ab fugit distinctio iure necessitatibus magni, saepe velit laborum? Deserunt cum in molestiae tempore hic nostrum minima illum quasi debitis reprehenderit modi officiis veritatis, molestias quas dolorem dolor fugiat vel et error eius omnis dolore quos. Possimus, commodi.
-                    </p>
-                    <div class="text-wrapper-6">30 Juni 2019</div>
+                    </p> -->
+                    <p class="p" id="book-description"></p>
+                    <div class="text-wrapper-6" id="book-date"></div>
+                    <!-- <div class="text-wrapper-6">30 Juni 2019</div> -->
                 </div>
                 <div class="col-md-5 d-flex flex-column justify-content-end align-items-end">
                     <button class="borrow-button bottom-0 end-20">
@@ -73,24 +78,22 @@
             <h1>Edit Data</h1>
             <form id="book-form" class="grid-form">
                 <div class="form-group">
-                    <label for="image-url">Image URL </label>
-                    <input type="text" id="image-url" name="image-url" placeholder="http://gambar.com/dilan.jpg"
-                        required />
+                    <label for="image-url">Image URL</label>
+                    <input type="text" id="edit-image-url" name="edit-image-url" placeholder="http://gambar.com/dilan.jpg" required />
                 </div>
                 <div class="form-group">
-                    <label for="book-title">Title </label>
-                    <input type="text" id="book-title" name="book-title" placeholder="Dilan 1990" required />
+                    <label for="book-title">Title</label>
+                    <input type="text" id="edit-book-title" name="edit-book-title" placeholder="Dilan 1990" required />
                 </div>
                 <div class="form-group">
-                    <label for="book-description">Description </label>
-                    <textarea id="book-description" name="book-description" style="height: 250px"
-                        placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, culpa aspernatur possimus consequatur vitae corporis."
-                        required></textarea>
+                    <label for="book-description">Description</label>
+                    <textarea id="edit-book-description" name="edit-book-description" style="height: 250px" placeholder="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, culpa aspernatur possimus consequatur vitae corporis." required></textarea>
                 </div>
-                <button type="button" id="save-button">Save</button>
+                <button type="button" id="update-button">Update</button>
             </form>
         </div>
     </div>
+    
     <div id="hapus-book-modal" class="modal">
         <div class="modal-content" style="width: 600px; height: 300px">
             <span class="close-button" id="close-modal-hapus">&times;</span>
@@ -103,29 +106,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#edit-books").click(function () {
-                $("#edit-book-modal").css("display", "block");
-            });
-            $("#hapus-books").click(function () {
-                $("#hapus-book-modal").css("display", "block");
-            });
-            $("#close-modal, .modal").click(function () {
-                $("#edit-book-modal").css("display", "none");
-            });
-            $("#close-modal-hapus").click(function () {
-                $("#hapus-book-modal").css("display", "none");
-                window.location.href = "../index.html";
-            });
-            $(".modal-content").click(function (e) {
-                e.stopPropagation();
-            });
-            $(".back-button").click(function () {
-                window.history.back();
-            });
-        });
-    </script>
+    <script src="../assets/js/detail-books.js"></script>
 </body>
 
 </html>

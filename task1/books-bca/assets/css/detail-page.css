@@ -314,7 +314,7 @@
     resize: vertical
 }
 
-#save-button {
+#update-button {
     margin-top: 10px;
     padding: 8px 16px;
     background-color: #fbcc38;
@@ -324,6 +324,6 @@
     cursor: pointer
 }
 
-#save-button:hover {
+#update-button:hover {
     background-color: #ebb40f
 }
