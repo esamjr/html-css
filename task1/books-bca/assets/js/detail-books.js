@@ -62,12 +62,19 @@ $(document).ready(function () {
         });
 
         $("#update-button").click(function () {
-            book.imageUrl = $("#edit-image-url").val();
-            book.title = $("#edit-book-title").val();
-            book.description = $("#edit-book-description").val();
+            const newImageUrl = $("#edit-image-url").val();
+            const newTitle = $("#edit-book-title").val();
+            const newDescription = $("#edit-book-description").val();
+            if (!newImageUrl || !newTitle || !newDescription) {
+                alert("Please fill in all the required fields.");
+                return;
+            }
+            book.imageUrl = newImageUrl;
+            book.title = newTitle;
+            book.description = newDescription;
             localStorage.setItem('bookList', JSON.stringify(bookList));
             location.reload();
             $("#edit-book-modal").css("display", "none");
-        });
+        });        
     }
 });

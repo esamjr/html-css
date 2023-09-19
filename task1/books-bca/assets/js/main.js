@@ -1,5 +1,12 @@
 $(document).ready(function () {
+  const user = JSON.parse(localStorage.getItem('users')).find((u) => u.isLogged === true);
+  if (user) {
+    $("#user-fullname").text(user.fname);
+  } else {
+    window.location.href = "/pages/login.html";
+  }
   let bookList = JSON.parse(localStorage.getItem('bookList')) || [];
+
   function renderBookList() {
     const bookListElement = $("#book-list");
     bookListElement.empty();
@@ -37,21 +44,28 @@ $(document).ready(function () {
     $(this).toggleClass("close");
     $(".overlap").removeClass("overlap");
   });
+
   function slugify(text) {
     return text
-        .toString()
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w-]+/g, '')
-        .replace(/--+/g, '-')
-        .replace(/^-+/, '')
-        .replace(/-+$/, '');
+      .toString()
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w-]+/g, '')
+      .replace(/--+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
   }
   $("#save-button").click(function () {
     const imageUrl = $("#image-url").val();
     const title = $("#book-title").val();
     const description = $("#book-description").val();
+
+    if (!imageUrl || !title || !description) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+
     const slug = slugify(title);
     const book = {
       imageUrl,
@@ -59,6 +73,7 @@ $(document).ready(function () {
       description,
       slug,
     };
+
     bookList.push(book);
     localStorage.setItem('bookList', JSON.stringify(bookList));
     renderBookList();
@@ -66,5 +81,18 @@ $(document).ready(function () {
     $("#book-title").val("");
     $("#book-description").val("");
     $("#add-book-modal").css("display", "none");
+  });
+
+  $("#logout-link").click(function (event) {
+    event.preventDefault();
+
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const loggedInUser = users.find((user) => user.isLogged === true);
+
+    if (loggedInUser) {
+      loggedInUser.isLogged = false;
+      localStorage.setItem('users', JSON.stringify(users));
+    }
+    window.location.href = "/pages/login.html";
   });
 });

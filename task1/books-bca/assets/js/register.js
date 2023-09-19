@@ -1,5 +1,6 @@
 $(document).ready(function () {
     function registerUser() {
+        const fname = $("#fullname-input").val();
         const email = $("#email-input").val();
         const password = $("#password-input").val();
         const users = JSON.parse(localStorage.getItem('users')) || [];
@@ -10,6 +11,7 @@ $(document).ready(function () {
             return;
         }
         const newUser = {
+            fname,
             email,
             password,
         };
